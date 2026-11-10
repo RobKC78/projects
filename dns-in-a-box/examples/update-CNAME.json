@@ -1,0 +1,11 @@
+{
+  "issue_key": "DNS-124",
+  "summary": "Point the build portal alias at the replacement host",
+  "operation": "update",
+  "zone_key": "lab-internal",
+  "owner": "build.lab.example.net",
+  "type": "CNAME",
+  "expected": {"id": 3100, "ttl": 600, "data": {"target": "build01.lab.example.net", "target_id": 3101}},
+  "desired": {"ttl": 300, "data": {"target": "build02.lab.example.net", "target_id": 3102}},
+  "window": null
+}

@@ -1,0 +1,23 @@
+{
+  "lab-internal": {
+    "enabled": false,
+    "fqdn": "lab.example.net",
+    "zone_id": 1001,
+    "view_id": 2001,
+    "authorities": ["192.0.2.53", "192.0.2.54"],
+    "types": ["A", "AAAA", "CNAME", "TXT", "MX", "SRV", "CAA"],
+    "allow_wildcard": false,
+    "allow_apex": false,
+    "require_window": false,
+    "protected_owners": ["admin.lab.example.net"]
+  },
+  "lab-reverse": {
+    "enabled": false,
+    "fqdn": "2.0.192.in-addr.arpa",
+    "zone_id": 1002,
+    "view_id": 2001,
+    "authorities": ["192.0.2.53", "192.0.2.54"],
+    "types": ["PTR"],
+    "require_window": true
+  }
+}

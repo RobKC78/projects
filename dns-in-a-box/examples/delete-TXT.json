@@ -1,0 +1,11 @@
+{
+  "issue_key": "DNS-125",
+  "summary": "Remove the retired verification token",
+  "operation": "delete",
+  "zone_key": "lab-internal",
+  "owner": "_verify.lab.example.net",
+  "type": "TXT",
+  "expected": {"id": 3103, "ttl": 300, "data": {"text": "verification=retired-example"}},
+  "desired": null,
+  "window": null
+}
