@@ -1,0 +1,11 @@
+{
+  "issue_key": "DNS-123",
+  "summary": "Create the build API host in the lab DNS view",
+  "operation": "create",
+  "zone_key": "lab-internal",
+  "owner": "build-api.lab.example.net",
+  "type": "A",
+  "expected": null,
+  "desired": {"ttl": 300, "data": {"addresses": ["192.0.2.44"]}},
+  "window": null
+}

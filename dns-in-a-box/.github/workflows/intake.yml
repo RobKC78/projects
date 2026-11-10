@@ -1,0 +1,32 @@
+name: Jira DNS intake
+on:
+  workflow_dispatch:
+    inputs:
+      issue_key:
+        description: Approved Jira DNS request key
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  intake:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: dns-intake
+    timeout-minutes: 5
+    concurrency:
+      group: dns-intake-${{ inputs.issue_key }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.DNS_PR_BOT_TOKEN }}
+      - name: Read approved request and open pull request
+        env:
+          ISSUE_KEY: ${{ inputs.issue_key }}
+          GH_TOKEN: ${{ secrets.DNS_PR_BOT_TOKEN }}
+          JIRA_URL: ${{ vars.JIRA_URL }}
+          JIRA_USER: ${{ secrets.JIRA_USER }}
+          JIRA_TOKEN: ${{ secrets.JIRA_TOKEN }}
+        run: python3 -m dnsgitops.workflow intake "$ISSUE_KEY"

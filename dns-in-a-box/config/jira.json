@@ -1,0 +1,15 @@
+{
+  "project_key": "DNS",
+  "issue_type_id": "10001",
+  "approved_status_id": "10002",
+  "fields": {
+    "operation": "customfield_10100",
+    "zone_key": "customfield_10101",
+    "owner": "customfield_10102",
+    "type": "customfield_10103",
+    "expected": "customfield_10104",
+    "desired": "customfield_10105",
+    "window_start": "customfield_10106",
+    "window_end": "customfield_10107"
+  }
+}

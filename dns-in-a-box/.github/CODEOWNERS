@@ -1,0 +1,3 @@
+# Replace with your actual teams before enabling branch protection.
+* @YOUR-ORG/dns-gitops-maintainers
+/requests/ @YOUR-ORG/dns-approvers

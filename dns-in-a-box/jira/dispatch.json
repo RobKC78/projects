@@ -1,0 +1,4 @@
+{
+  "ref": "main",
+  "inputs": { "issue_key": "{{issue.key}}" }
+}
