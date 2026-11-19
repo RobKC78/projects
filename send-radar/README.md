@@ -15,7 +15,13 @@ The locators are 10 seconds, 1280 by 720 at 24 fps. On desktops where DejaVu San
 
 ## Chapter transitions
 
-The boundary function in transitions.py takes the new image, the last image of the dispatch set, normalized progress from 0 to 1, the transition index (0 through 3), and a repeatable seed. Both images should be same-sized Pillow RGB images. Index 0 breaks the dispatch screen into fragments, 1 pulls a rippling waterline through the frame, 2 cracks the surface open from the center, and 3 reveals the next shot in three spectral bands.
+The second cut uses dispatch_fx.py to stage Radar’s gesture, animate the wall and mix its sound. The pilot uses a wrist cannon and flying glass, a tether that pulls the screen into a whirlpool, rocket boots that cut a glowing seam, and a prism that separates three panes. A short shutter cut marks the recap. The original four simple wipes remain in transitions.py.
+
+To draw a new cast, install Pillow, NumPy and SciPy, then run the following with a unique episode identifier. Each block of six draws uses every effect once. The saved selection keeps alternate aspect ratios and rerenders consistent.
+
+    python dispatch_fx.py episode-02 --chapters 4 --output transition-cast.json
+
+Use the renderer in the episode studio kit to composite the character’s animated hand and boot positions. The Python module also exposes reveal(mode, old_image, new_image, progress) for use with a pair of same-sized RGB frames.
 
 ## Code, geography and footage
 
