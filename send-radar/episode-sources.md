@@ -48,4 +48,4 @@ Real footage and expedition stills appear with original character animation, ret
 
 - Creative Commons Attribution 4.0  https://creativecommons.org/licenses/by/4.0/
 
-- Guest questioner voice, Piper LJ Speech model card  https://huggingface.co/rhasspy/piper-voices/blob/main/en/en_US/ljspeech/high/MODEL_CARD
+- The revised guest performance uses an original synthetic voice designed with Qwen3-TTS VoiceDesign and an in-house reference for continuity. The pilot questions and the editorial effect animation and sounds were authored for Send Radar.
